@@ -1,0 +1,6 @@
+.env
+/venv/
+/tests/
+**/__pycache__/
+flask_sessions
+estructura_carpetas.txt

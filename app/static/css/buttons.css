@@ -1,0 +1,41 @@
+.cont-top-buttons{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: right;
+}
+
+.btn{
+    border-radius: 0;
+}
+
+.btn-category{
+    background-color: var(--withe);
+    color: var(--dark-gray);
+    border: 1px solid var(--gray);
+}
+
+.btn-category:hover{
+    background-color: var(--gray);
+}
+
+.btn-blue{
+    background-color: var(--blue);
+    color: var(--withe);
+}
+
+.btn-blue:hover{
+    background-color: var(--dark-blue);
+    color: var(--light-gray);
+}
+
+.cont-btns-acciones{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.cont-btns-acciones form {
+    width: 50px;
+}

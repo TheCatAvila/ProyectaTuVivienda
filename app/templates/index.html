@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block title %}Inicio{% endblock %}
+
+<!-- Estilos css personalizados por página -->
+{% block css %}
+{% endblock %}
+
+<!-- Contenido principal de la página -->
+{% block content %}
+<div class="container-fluid cont-main">
+    <div class="row gx-0">
+        <div class="col cont-top-buttons">
+            <!-- Button to Open the Modal -->
+            <a class="btn btn-category" href="">Boton secundary</a>
+            </button>
+            <!-- Button to Open the Modal -->
+            <button type="button" class="btn btn-blue" data-bs-toggle="modal" data-bs-target="#crearFamilia">
+                Boton primary
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para registrar egreso -->
+<div class="modal fade" id="crearFamilia">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form id="egresoForm" action="" method="POST">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Modal de ejemplo</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+
+                    <div class="cont-label-input">
+                        <label for="monto">tecxto de ejemplo</label>
+                        <input type="text" id="family_name" name="family_name" required>
+                        <span class="error" id="montoError"></span>
+                    </div>
+
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-blue">Crear</button>
+                </div>
+            </form>
+
+            <style>
+                .error {
+                    color: red;
+                    font-size: 0.875em;
+                    display: block;
+                    margin-top: 5px;
+                }
+            </style>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+<!-- JavaScript personalizado por página -->
+{% block js %}
+<script src="{{ url_for('static', filename='js/swal-login-response.js') }}"></script>
+{% endblock %}

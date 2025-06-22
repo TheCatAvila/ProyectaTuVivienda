@@ -1,0 +1,109 @@
+@import url('variables.css');
+
+/* GENERALES */
+body {
+    display: flex;
+    height: 100vh;
+    background-color: var(--light-gray);
+}
+
+main{
+    height: 100%;
+    width: 100%;
+}
+
+/* NAVBAR */
+.navbar{
+    background-color: var(--withe);
+    color: var(--dark-gray);
+    border-bottom: 1px solid var(--gray);
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    position: fixed;
+}
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+}
+.sidebar a:hover {
+    background-color: #495057;
+}
+
+/* COLUMNAS Y ROWS */
+.cont-main{
+    margin-top: 70px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex-grow: 1;
+    margin-left: 250px ;
+    padding: 10px;
+}
+
+.modal-content{
+    border-radius: 0;
+}
+
+.cont-top-directions{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: left;
+}
+
+.windows-name{
+    font-size: 1.5em;
+    font-weight: 500;
+    color: var(--dark-gray);
+    margin: 0;
+    padding: 0;
+}
+
+.direction-name{
+    font-size: 1.0em;
+    font-weight: 500;
+    color: var(--dark-gray);
+    margin: 0;
+    padding: 0;
+}
+
+.direction-icon{
+    font-size: 0.7em;
+    font-weight: 500;
+    color: var(--dark-gray);
+}
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: 100px;
+        padding: 10px;
+    }
+    .content {
+        margin-left: 100px;
+    }
+    .sidebar a {
+        text-align: center;
+        padding: 15px;
+    }
+    .sidebar a span {
+        display: none;
+    }
+
+    .row {
+        margin-left: 100px; /* Respeta el nuevo tamaño reducido de la sidebar */
+    }
+}
